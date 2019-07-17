@@ -2,14 +2,14 @@
 class Wtfutil < Formula
   desc "The personal information dashboard for your terminal."
   homepage "https://wtfutil.com"
-  version "0.17.0"
+  version "0.17.1"
 
   if OS.mac?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.17.0/wtf_0.17.0_darwin_amd64.tar.gz"
-    sha256 "7706622793d5c8aa520e9b1609554df120f40db3c54ac8a2410e9ab607400614"
+    url "https://github.com/wtfutil/wtf/releases/download/v0.17.1/wtf_0.17.1_darwin_amd64.tar.gz"
+    sha256 "a4ccdb1a1e67013b1dd6896780a6190e1327620e46ef4f9d22632b1079a05ccb"
   elsif OS.linux?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.17.0/wtf_0.17.0_linux_amd64.tar.gz"
-    sha256 "9b1d44faf9ce28ba5d065897ff9566414cdcd1a6f0172e8bd4fe33ceb8e0d4e0"
+    url "https://github.com/wtfutil/wtf/releases/download/v0.17.1/wtf_0.17.1_linux_amd64.tar.gz"
+    sha256 "ccdfc8f160dd4f777ad4407ac6a406ca4ee96b97c6b5bf39d0e97c141d5d1de2"
   end
 
   def install
