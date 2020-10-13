@@ -2,24 +2,24 @@
 class Wtfutil < Formula
   desc "The personal information dashboard for your terminal."
   homepage "https://wtfutil.com"
-  version "0.32.0"
+  version "0.33.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.32.0/wtf_0.32.0_darwin_amd64.tar.gz"
-    sha256 "ee6185e0bbb03aef60b12978c4bd01add0aa1df90b289ef63a73ce7e76409d7b"
+    url "https://github.com/wtfutil/wtf/releases/download/v0.33.0/wtf_0.33.0_darwin_amd64.tar.gz"
+    sha256 "90acbdb64060f75c2fa44f7a85d897ae4726169a4747be5724a6c23bbc93b1a4"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/wtfutil/wtf/releases/download/v0.32.0/wtf_0.32.0_linux_amd64.tar.gz"
-      sha256 "1a9e0b0bc1e2f0bd199b0237d964b34f2a62b96c34362c6739c50a2be4e3ce9e"
+      url "https://github.com/wtfutil/wtf/releases/download/v0.33.0/wtf_0.33.0_linux_amd64.tar.gz"
+      sha256 "2f0a9c2f12270f67335f56c709bd8bbf971883f69215ddc0178a5cc1bc02b5a8"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/wtfutil/wtf/releases/download/v0.32.0/wtf_0.32.0_linux_arm64.tar.gz"
-        sha256 "32c49d87b4b99b121f3f365983fe8696fa08d5f4edb28c02101a948dddaeebcd"
+        url "https://github.com/wtfutil/wtf/releases/download/v0.33.0/wtf_0.33.0_linux_arm64.tar.gz"
+        sha256 "90d5b5131ce3ce02e967b8067b53bc6ed51c01d165c456d00e07be516c55e338"
       else
-        url "https://github.com/wtfutil/wtf/releases/download/v0.32.0/wtf_0.32.0_linux_armv6.tar.gz"
-        sha256 "e5c9ed32f1eaa1e0566f81e26a25064d19200f0fe1b7cf693b52a800a1acb18c"
+        url "https://github.com/wtfutil/wtf/releases/download/v0.33.0/wtf_0.33.0_linux_armv6.tar.gz"
+        sha256 "07137059b830ec2a97a489b0670fcf438fb52ec3f57f0c2dfe955dff231ac50b"
       end
     end
   end
