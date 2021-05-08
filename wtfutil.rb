@@ -5,28 +5,28 @@
 class Wtfutil < Formula
   desc "The personal information dashboard for your terminal."
   homepage "https://wtfutil.com"
-  version "0.36.0"
+  version "0.37.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.36.0/wtf_0.36.0_darwin_amd64.tar.gz"
-    sha256 "72de0d48be4bb8b9fed106e913f87464a330f91f440dcbea45cb7e95275ecda5"
+    url "https://github.com/wtfutil/wtf/releases/download/v0.37.0/wtf_0.37.0_darwin_amd64.tar.gz"
+    sha256 "a8b6f2f7bb40a0fee901f040b595f1c93fdac6f7ac7e1f5dfdfbbb96c9fc1a9c"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.36.0/wtf_0.36.0_darwin_arm64.tar.gz"
-    sha256 "fc6d003c23c361663210c359d617f25a2c2f481b1fbcfcf66693519f67ea000a"
+    url "https://github.com/wtfutil/wtf/releases/download/v0.37.0/wtf_0.37.0_darwin_arm64.tar.gz"
+    sha256 "4e286f711873d0f73f783b9b0823bb073a8054efc4dc0924914145384d348da1"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.36.0/wtf_0.36.0_linux_amd64.tar.gz"
-    sha256 "fc3d8a885b85c505d1182000c119896ccfc18d1f8380cd107375a155d7d4cde3"
+    url "https://github.com/wtfutil/wtf/releases/download/v0.37.0/wtf_0.37.0_linux_amd64.tar.gz"
+    sha256 "4cd38ed342f6e2acd1d65aa7e55f0d262ea2f73825e7fcde1a7d77ffe72d5fa4"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.36.0/wtf_0.36.0_linux_armv6.tar.gz"
-    sha256 "f9aa66ff146277cc85682ba59d1d4db31d0795fefaf67d7f57d8bef95e1e5b87"
+    url "https://github.com/wtfutil/wtf/releases/download/v0.37.0/wtf_0.37.0_linux_armv6.tar.gz"
+    sha256 "a40ee1949c86ebc4c83b352da3835c8631a6421590861753117c9b01c3917266"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.36.0/wtf_0.36.0_linux_arm64.tar.gz"
-    sha256 "7bd66abdfc9a13272e7868b86e12974c621065b95d441a16ddae25bbe41ec526"
+    url "https://github.com/wtfutil/wtf/releases/download/v0.37.0/wtf_0.37.0_linux_arm64.tar.gz"
+    sha256 "6a430f3f3e2b3a5b0222ae0c40169ab01fb53812258e1255be88e460e077b494"
   end
 
   def install
