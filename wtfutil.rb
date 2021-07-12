@@ -5,28 +5,33 @@
 class Wtfutil < Formula
   desc "The personal information dashboard for your terminal."
   homepage "https://wtfutil.com"
-  version "0.37.0"
+  version "0.38.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.37.0/wtf_0.37.0_darwin_amd64.tar.gz"
-    sha256 "a8b6f2f7bb40a0fee901f040b595f1c93fdac6f7ac7e1f5dfdfbbb96c9fc1a9c"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/wtfutil/wtf/releases/download/v0.38.0/wtf_0.38.0_darwin_amd64.tar.gz"
+      sha256 "9637d2641a40e9b3d07dbafff6c5cdc9a999efc726df31dbffb769ecb0f3a299"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/wtfutil/wtf/releases/download/v0.38.0/wtf_0.38.0_darwin_arm64.tar.gz"
+      sha256 "ce0d203df7fa557252b86134a652542d72215fab17d4d3d563edf88cba0b5962"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.37.0/wtf_0.37.0_darwin_arm64.tar.gz"
-    sha256 "4e286f711873d0f73f783b9b0823bb073a8054efc4dc0924914145384d348da1"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.37.0/wtf_0.37.0_linux_amd64.tar.gz"
-    sha256 "4cd38ed342f6e2acd1d65aa7e55f0d262ea2f73825e7fcde1a7d77ffe72d5fa4"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.37.0/wtf_0.37.0_linux_armv6.tar.gz"
-    sha256 "a40ee1949c86ebc4c83b352da3835c8631a6421590861753117c9b01c3917266"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/wtfutil/wtf/releases/download/v0.37.0/wtf_0.37.0_linux_arm64.tar.gz"
-    sha256 "6a430f3f3e2b3a5b0222ae0c40169ab01fb53812258e1255be88e460e077b494"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/wtfutil/wtf/releases/download/v0.38.0/wtf_0.38.0_linux_amd64.tar.gz"
+      sha256 "f63f6dbd7a965066b1616e298ac4d33298ad4de445b42097856d317b3f61f0fe"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/wtfutil/wtf/releases/download/v0.38.0/wtf_0.38.0_linux_armv6.tar.gz"
+      sha256 "b81596a08fcefc6a5f5788e66a157524a5fce8858573accc89d30fd882808983"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/wtfutil/wtf/releases/download/v0.38.0/wtf_0.38.0_linux_arm64.tar.gz"
+      sha256 "b5fca29d3cd0e3e3b20c2cf841fd4a585f5dbac2f22e053aa22061cc6faff5f5"
+    end
   end
 
   def install
