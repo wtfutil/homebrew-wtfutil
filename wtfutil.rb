@@ -5,28 +5,32 @@
 class Wtfutil < Formula
   desc "The personal information dashboard for your terminal."
   homepage "https://wtfutil.com"
-  version "0.39.2"
+  version "0.40.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wtfutil/wtf/releases/download/v0.39.2/wtf_0.39.2_darwin_amd64.tar.gz"
-      sha256 "a0b0d25b7380e316114ab728338dc89c865d900add2fef032314c8dad2582b4e"
+      url "https://github.com/wtfutil/wtf/releases/download/v0.40.0/wtf_0.40.0_darwin_amd64.tar.gz"
+      sha256 "6814cbfd4467b5926b0c6fd3aa04828c723860f483d4b38326d3366f8214a858"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/wtfutil/wtf/releases/download/v0.40.0/wtf_0.40.0_darwin_arm64.tar.gz"
+      sha256 "c4a6a21223a2b908132f8565ae1430c5215943a8d7cdb79503118fe2df44e9bb"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/wtfutil/wtf/releases/download/v0.39.2/wtf_0.39.2_linux_amd64.tar.gz"
-      sha256 "5733dbaafdd736381e5097dda24fbd085c4a2ede538d3c65a24c832c31d0a5ea"
+      url "https://github.com/wtfutil/wtf/releases/download/v0.40.0/wtf_0.40.0_linux_amd64.tar.gz"
+      sha256 "1bd9ce83260731f4df25dd80f86c09d9acdb222f5c46f0667e84f77626c7128d"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/wtfutil/wtf/releases/download/v0.39.2/wtf_0.39.2_linux_armv6.tar.gz"
-      sha256 "1ef92f68ea2fedc2da60482764a90707931a10aca3b3737fa504a54bf748c2a9"
+      url "https://github.com/wtfutil/wtf/releases/download/v0.40.0/wtf_0.40.0_linux_armv6.tar.gz"
+      sha256 "c6cf0b1a95b7f562294039251f13fef77c6985beb105ecdd02cf86b5fc18e44f"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wtfutil/wtf/releases/download/v0.39.2/wtf_0.39.2_linux_arm64.tar.gz"
-      sha256 "cd2497204c9c7e1420bf85cf4f93bfbd887f9b94da3a87be9edf1a775888a7e7"
+      url "https://github.com/wtfutil/wtf/releases/download/v0.40.0/wtf_0.40.0_linux_arm64.tar.gz"
+      sha256 "911dbf6f25c89705b85afabb91efc2695407fb43bb45dd84d186fc5ac3a9e94d"
     end
   end
 
