@@ -5,48 +5,7 @@
 class Wtfutil < Formula
   desc "The personal information dashboard for your terminal."
   homepage "https://wtfutil.com"
-  version "0.44.1"
+  version "0.44.2"
 
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/wtfutil/wtf/releases/download/v0.44.1/wtf_0.44.1_darwin_amd64.tar.gz"
-      sha256 "e74ffe8fe47949365ab82b001f57a150bd9be85a3ec525eb042ed926993b5bb9"
-
-      def install
-        bin.install "wtfutil"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/wtfutil/wtf/releases/download/v0.44.1/wtf_0.44.1_darwin_arm64.tar.gz"
-      sha256 "9bef473b249654319037b890b0f4c0c80a8d0cac16a28589691959ae11740d3f"
-
-      def install
-        bin.install "wtfutil"
-      end
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/wtfutil/wtf/releases/download/v0.44.1/wtf_0.44.1_linux_amd64.tar.gz"
-      sha256 "ec47ef0fbe4433ab23f251e521be529e35810b9a1b81898cd1f8f66382067416"
-      def install
-        bin.install "wtfutil"
-      end
-    end
-    if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/wtfutil/wtf/releases/download/v0.44.1/wtf_0.44.1_linux_armv6.tar.gz"
-      sha256 "6fe3cb1ef2f9e34c89b251366d87bdd24e87016b6dce8768bbf37867e2daf726"
-      def install
-        bin.install "wtfutil"
-      end
-    end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/wtfutil/wtf/releases/download/v0.44.1/wtf_0.44.1_linux_arm64.tar.gz"
-      sha256 "5b1bdaa8cdb7d14000985ec11914d9db7a8f87dc8b6679deb1f0211d481f7224"
-      def install
-        bin.install "wtfutil"
-      end
-    end
-  end
+  disable! date: "2025-07-08", because: "the brew cask should be used instead of the formula", replacement_cask: "wtfutil"
 end
