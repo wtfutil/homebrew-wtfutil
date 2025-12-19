@@ -3,7 +3,7 @@ cask "wtfutil" do
   name "wtfutil"
   desc "The personal information dashboard for your terminal."
   homepage "https://wtfutil.com"
-  version "0.47.1"
+  version "0.48.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "wtfutil" do
   on_macos do
     on_intel do
       url "https://github.com/wtfutil/wtf/releases/download/v#{version}/wtf_#{version}_darwin_amd64.tar.gz"
-      sha256 "57f914101e74ebea7c213c3266f19196ea25c5cb469b8ac3997c622b48806967"
+      sha256 "237adfe9d93eb1e3d50de15ce7bfcfb5d7cc7695fd76b72b08dbb37bb43dae96"
     end
     on_arm do
       url "https://github.com/wtfutil/wtf/releases/download/v#{version}/wtf_#{version}_darwin_arm64.tar.gz"
-      sha256 "293833bb373404d8b31a431fb8d4694001a7d5195c2d4c1035e145603920a48c"
+      sha256 "7818d19988e2bba0c12cb6c5ad3f434803747065346ee92c097e467eb55b74f3"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/wtfutil/wtf/releases/download/v#{version}/wtf_#{version}_linux_amd64.tar.gz"
-      sha256 "5e2428064eb915c875de6e2759f7ac08d2137cf9d2434660b51ba3746cf64f87"
+      sha256 "113e229af6e33d95aac39892daa553214cb205c2fba5ceaf5eaa5f728bce0a3e"
     end
     on_arm do
       url "https://github.com/wtfutil/wtf/releases/download/v#{version}/wtf_#{version}_linux_arm64.tar.gz"
-      sha256 "8016102ab3f5df3a8d544617e8121219f19fe06bb293525db798ecbd57f40e93"
+      sha256 "aabde0f8879049f026da5785a7b5de3b0069e7ac94d9485de448b835b6420a3d"
     end
   end
 
